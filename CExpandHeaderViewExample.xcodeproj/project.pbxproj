@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180A2E901B81838D0038CA8A /* GUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A2E8F1B81838D0038CA8A /* GUITableView.m */; };
+		180A2E951B81B48B0038CA8A /* GUIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A2E941B81B48B0038CA8A /* GUIScrollView.m */; };
 		AF10243C19AF1076006EBE11 /* ScrollTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF10243B19AF1076006EBE11 /* ScrollTestViewController.m */; };
 		AF10243F19AF1906006EBE11 /* CustomHeadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF10243E19AF1906006EBE11 /* CustomHeadViewController.m */; };
 		AF37E90319ADC5C0000C6432 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF37E90219ADC5C0000C6432 /* Foundation.framework */; };
@@ -38,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180A2E8E1B81838D0038CA8A /* GUITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUITableView.h; sourceTree = "<group>"; };
+		180A2E8F1B81838D0038CA8A /* GUITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUITableView.m; sourceTree = "<group>"; };
+		180A2E931B81B48B0038CA8A /* GUIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIScrollView.h; sourceTree = "<group>"; };
+		180A2E941B81B48B0038CA8A /* GUIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUIScrollView.m; sourceTree = "<group>"; };
+		1843C1B01B830A62005D36F6 /* GDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDefine.h; sourceTree = "<group>"; };
 		AF10243A19AF1075006EBE11 /* ScrollTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTestViewController.h; sourceTree = "<group>"; };
 		AF10243B19AF1076006EBE11 /* ScrollTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTestViewController.m; sourceTree = "<group>"; };
 		AF10243D19AF1906006EBE11 /* CustomHeadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeadViewController.h; sourceTree = "<group>"; };
@@ -124,6 +131,11 @@
 		AF37E90819ADC5C0000C6432 /* CExpandHeaderViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				1843C1B01B830A62005D36F6 /* GDefine.h */,
+				180A2E931B81B48B0038CA8A /* GUIScrollView.h */,
+				180A2E941B81B48B0038CA8A /* GUIScrollView.m */,
+				180A2E8E1B81838D0038CA8A /* GUITableView.h */,
+				180A2E8F1B81838D0038CA8A /* GUITableView.m */,
 				AF37E91119ADC5C0000C6432 /* AppDelegate.h */,
 				AF37E91219ADC5C0000C6432 /* AppDelegate.m */,
 				AF37E91419ADC5C0000C6432 /* Main.storyboard */,
@@ -277,8 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF37E91919ADC5C0000C6432 /* ViewController.m in Sources */,
+				180A2E951B81B48B0038CA8A /* GUIScrollView.m in Sources */,
 				AF37E91319ADC5C0000C6432 /* AppDelegate.m in Sources */,
 				AF37E93A19ADC61B000C6432 /* CExpandHeader.m in Sources */,
+				180A2E901B81838D0038CA8A /* GUITableView.m in Sources */,
 				AF10243F19AF1906006EBE11 /* CustomHeadViewController.m in Sources */,
 				AF37E90F19ADC5C0000C6432 /* main.m in Sources */,
 				AF10243C19AF1076006EBE11 /* ScrollTestViewController.m in Sources */,

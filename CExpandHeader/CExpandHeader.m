@@ -6,9 +6,11 @@
 //  Copyright (c) 2014年 Mei_L. All rights reserved.
 //
 
-#define CExpandContentOffset @"contentOffset"
-
 #import "CExpandHeader.h"
+#import "ScrollTestViewController.h"
+#import "GDefine.h"
+
+#define CExpandContentOffset @"contentOffset"
 
 @implementation CExpandHeader
 {
@@ -16,6 +18,8 @@
     __weak UIView *_expandView; //背景可以伸展的View
     
     CGFloat _expandHeight;
+	
+	float oldOffsetY;
 }
 
 -(void) dealloc
@@ -68,6 +72,13 @@
 	CGFloat offsetY = scrollView.contentOffset.y;
 //	NSLog(@"scrollViewDidScroll - offsetY:%f",offsetY);
 	
+	if(self.limitHeight!=0 && offsetY>self.limitHeight)
+	{
+		scrollView.contentOffset=CGPointMake(0, self.limitHeight);
+		return;
+	}
+	
+	oldOffsetY=offsetY;
 	CGRect currentFrame = _expandView.frame;
 //	if(offsetY>=0 || scrollView.decelerating)
 //	{
@@ -98,7 +109,14 @@
 //		currentFrame.origin.y=offsetY-currentFrame.size.height;
 	
 	_expandView.frame = currentFrame;
+	
+	[self.parentControl updateScroll:offsetY];
 }
+
+//-(void) updateOffset:(float)offset
+//{
+//	_scrollView.contentOffset=CGPointMake(0, oldOffsetY+offset);
+//}
 
 // no use
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate

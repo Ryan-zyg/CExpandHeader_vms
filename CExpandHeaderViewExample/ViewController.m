@@ -8,16 +8,8 @@
 
 #import "ViewController.h"
 #import "CExpandHeader.h"
+#import "GDefine.h"
 
-#define CExpandContentOffset @"contentOffset"
-
-#define AFTER(s) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(s * NSEC_PER_SEC)), dispatch_get_main_queue(), ^
-
-#define KNeedSaveOffset NO//YES//
-
-@interface ViewController () <UIScrollViewDelegate>
-
-@end
 
 @implementation ViewController{
     CExpandHeader *_header;

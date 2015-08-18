@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScrollTestViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface ScrollTestViewController : UIViewController<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
+{
+	float beginY;
+	float scrollViewBeginY;
+	float tableViewBeginY;
+}
+
+-(BOOL) checkCanScroll;
+-(void) updateScroll:(float)y;
+-(UITableView*) tableView;
 
 @end
